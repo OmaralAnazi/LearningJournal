@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Learning journal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/baseStyle.css">
+        <link rel="stylesheet" href="../blogsPage/style.css">
+
+        <!-- This CSS rule its here in the HTML, so I can enable/disable it
+             easily by the js code -->
+        <style id="newstyle">
+            @media (min-width:680px) and (max-width:1011px) {
+                .blogs {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-areas: 
+                        "blog-item-1 blog-item-1 blog-item-2 blog-item-2"
+                        "........... blog-item-3 blog-item-3 ...........";
+                }
+                #blog-item-1 {grid-area: blog-item-1;}
+                #blog-item-2 {grid-area: blog-item-2;}
+                #blog-item-3 {grid-area: blog-item-3;}
+            }
+        </style> 
+    
+    </head>
+
+    <body>
+        
+        <header>
+            <img class="logo-img" src="../images/logo.png" alt="website logo">
+            <h1 class="header-title">My learning journal</h1>
+            <nav>
+                <ul>
+                    <li> <a href="../index.html"> HOME </a> </li>
+                    <li> <a href="https://omaralanazi.com" target="_blank"> ABOUT ME </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <p class="date">JULY 23, 2022</p>
+                <h1>My new journey as a bootcamp student.</h1>
+                <p>After several months of learning in the Frontend Developer Career Path, I've 
+                   made the big jump over to the Bootcamp to get expert code reviews of my Solo
+                   Projects projects and meet like-minded peers.</p>    
+            </section>
+    
+            <section class="blogs" id="blogs">
+                <!-- feeded by ../blogsPage/index.js -->
+            </section>
+            
+            <button id="view-less-more-btn" class="link">View more</button>
+
+        </main>
+
+        <footer>
+            <p>My Learning Journal</p>
+            <p class="copyright">Copyright ©2022</p>
+        </footer>
+
+        <script src="../blogsPage/index.js" type="module"></script>
+    </body>
+
+</html>

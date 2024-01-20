@@ -1,0 +1,154 @@
+/* ============== Typography ============== */
+
+.blogs p {
+    margin: 0;
+}
+
+.hero p:not(.date) {
+    font-size: 1.35rem;
+}
+
+.hero p {
+    margin: 0;
+}
+
+.blog-item .date {
+    font-size: 0.85rem;
+}
+
+/* ============== Hero Section ============== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: #FFFFFF;
+    min-height: 400px;
+    background: black url("../images/hero.png");
+    background-position: center;
+    background-size: cover;
+    padding: 1.75em;
+    padding-right: 6em;
+}
+
+/* ============== Blogs Section ============== */
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2em;
+    padding: 1.5em;
+}
+
+/* ============== Media queries ============== */
+
+@media (max-width:374px) {
+    .blogs {
+        padding: 0.75em;
+    }
+
+    .header-title {
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: 320px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 1em;
+    }
+
+    li a {
+        font-size: 0.75rem;
+    }
+    
+    .hero p:not(.date) {
+        font-size: 1.15rem;
+    }
+
+    .hero .date {
+        font-size: 0.75rem;
+    }
+
+}
+
+@media (max-width:520px) {
+    html {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .blog-item p {
+        font-size: 1.3rem;
+    }
+}
+
+@media ((min-width:521px) and (max-width:679px))
+or     ((min-width:820px) and (max-width:1012px))
+or      (min-width:1220px)  {
+    .blog-item .date {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .blog-item p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width:680px) {
+    .blogs {
+        margin: 3em 0;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding-right: 12em;
+    } 
+}
+
+@media (min-width:1160px) {
+    .hero {
+        min-height: 720px;
+    }
+}
+
+@media (min-width:1600px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
+@media (min-width:1340px) {
+    .blogs {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+}
+
+
+/* The following rule is written in the HTML instead of here! */
+
+/* 
+@media (min-width:680px) and (max-width:1011px) {
+    .blogs {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "blog-item-1 blog-item-1 blog-item-2 blog-item-2"
+            "........... blog-item-3 blog-item-3 ...........";
+    }
+    #blog-item-1 {grid-area: blog-item-1;}
+    #blog-item-2 {grid-area: blog-item-2;}
+    #blog-item-3 {grid-area: blog-item-3;}
+} 
+*/
