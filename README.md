@@ -17,5 +17,5 @@ The "Learning Journal" is a solo Scrimba Front-End Developer Program project sho
 Clone the repository and navigate through the pages using `index.html` to delve into the student's stories and progress.
 
 ## Demo
-[View Live Project](#)
+[View Live Project](https://sweet-cactus-11e53c.netlify.app/)
 
